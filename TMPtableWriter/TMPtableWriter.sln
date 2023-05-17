@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMPtableWriter", "TMPtableWriter\TMPtableWriter.csproj", "{94FB4089-8B2B-476D-AA2C-5136D8CE1D3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94FB4089-8B2B-476D-AA2C-5136D8CE1D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FB4089-8B2B-476D-AA2C-5136D8CE1D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FB4089-8B2B-476D-AA2C-5136D8CE1D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FB4089-8B2B-476D-AA2C-5136D8CE1D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B6830B6-1B4A-4A99-A435-B4CF49C72C8B}
+	EndGlobalSection
+EndGlobal

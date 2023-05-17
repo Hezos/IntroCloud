@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToBeAdministrated", "ToBeAdministrated\ToBeAdministrated.csproj", "{223808D8-2359-49DD-8412-1AF9E247423E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInterface", "CommandLineInterface\CommandLineInterface.csproj", "{64061EC0-BE9B-4D06-ACCF-89B04E37804D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureEventHubsReader", "AzureEventHubsReader\AzureEventHubsReader.csproj", "{2DF631EB-9F0C-463E-BF91-A7D84237FD07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureEventHubsWriter", "AzureEventHubsWriter\AzureEventHubsWriter.csproj", "{C4072F66-B9DB-40CA-A69B-E18A409E79D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RESTcontrollers", "RESTcontrollers\RESTcontrollers.csproj", "{E821ABF7-463B-42C8-951B-582AABFB0278}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpTableWriter", "HttpTableWriter\HttpTableWriter.csproj", "{42C2867B-40C8-477D-9327-8C16A0DB4AAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19060772-F805-4274-854B-B36F94B790D6}"
+	ProjectSection(SolutionItems) = preProject
+		project.json = project.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{223808D8-2359-49DD-8412-1AF9E247423E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223808D8-2359-49DD-8412-1AF9E247423E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223808D8-2359-49DD-8412-1AF9E247423E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223808D8-2359-49DD-8412-1AF9E247423E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64061EC0-BE9B-4D06-ACCF-89B04E37804D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64061EC0-BE9B-4D06-ACCF-89B04E37804D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64061EC0-BE9B-4D06-ACCF-89B04E37804D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64061EC0-BE9B-4D06-ACCF-89B04E37804D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF631EB-9F0C-463E-BF91-A7D84237FD07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF631EB-9F0C-463E-BF91-A7D84237FD07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF631EB-9F0C-463E-BF91-A7D84237FD07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF631EB-9F0C-463E-BF91-A7D84237FD07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4072F66-B9DB-40CA-A69B-E18A409E79D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4072F66-B9DB-40CA-A69B-E18A409E79D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4072F66-B9DB-40CA-A69B-E18A409E79D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4072F66-B9DB-40CA-A69B-E18A409E79D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E821ABF7-463B-42C8-951B-582AABFB0278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E821ABF7-463B-42C8-951B-582AABFB0278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E821ABF7-463B-42C8-951B-582AABFB0278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E821ABF7-463B-42C8-951B-582AABFB0278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C2867B-40C8-477D-9327-8C16A0DB4AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C2867B-40C8-477D-9327-8C16A0DB4AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C2867B-40C8-477D-9327-8C16A0DB4AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C2867B-40C8-477D-9327-8C16A0DB4AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8FC7C4A-0CDA-4998-85E2-22F44E04A173}
+	EndGlobalSection
+EndGlobal
