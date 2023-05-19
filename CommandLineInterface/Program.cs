@@ -21,7 +21,7 @@ namespace CommandLineInterface
                 {
                     case 1:
                         //Add logic goes here
-                        AddExamination();
+                      //  AddExamination();
                         break;
                     case 2:
                         //View logic goes here
@@ -50,14 +50,22 @@ namespace CommandLineInterface
         public static void AddExamination()
         {
             Examination examination = new Examination();
-            examination.Id = 2;
+            examination.Id = 3;
             examination.Eye = "Left";
             examination.Dioptry = 5.00;
             examination.Cylinder = 21;
             examination.Axis = 2;
 
             HttpServiceClass httpService = new HttpServiceClass(new HttpClient());
-            httpService.SendRequest(HttpMethod.Post, "http://localhost:7103/api/Function1", examination);
+            //httpService.SendRequest(HttpMethod.Post, "http://localhost:7103/api/Function1", examination);
+            if( httpService.SendRequest(HttpMethod.Post, "https://localhost:7252/Add", examination))
+            {
+                Console.WriteLine("Adding exam is successfull.");
+            }
+            else
+            {
+                Console.WriteLine("Adding exam didn't happen.");
+            }
         }
 
         public async static void EventTrigger()
@@ -88,6 +96,7 @@ namespace CommandLineInterface
                 // Use the producer client to send the batch of events to the event hub
                 await producerClient.SendAsync(eventBatch);
                 Console.WriteLine($"A batch of {numOfEvents} events has been published.");
+                //AddExamination();
             }
             finally
             {

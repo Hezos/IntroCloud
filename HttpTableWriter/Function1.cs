@@ -65,7 +65,7 @@ namespace HttpTableWriter
                 string partitionKey = "Examination";
                 //Check for rowkey correction!
                 string rowKey = data.Id.ToString();
-                rowKey = "2";
+                rowKey = "1";
                 TableEntity tableEntity = new TableEntity(partitionKey, rowKey){
 
                     /*
