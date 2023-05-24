@@ -1,6 +1,6 @@
 ﻿using Azure.Messaging.EventHubs;
 using Azure.Messaging.EventHubs.Producer;
-using RESTcontrollers.Models;
+using RESTcontrollers;
 using System;
 using System.Text;
 using System.Text.Json;
@@ -46,26 +46,30 @@ namespace CommandLineInterface
                 "Trigger EventHub event",
                 "Quit"
             });
-
-            switch (mainmenu.ReadMenu())
+            bool ShouldExit = false;
+            while (!ShouldExit)
             {
-                case 1:
-                    //NEW PATIENT
-                    Menu.ReadNewPatient();
-                    break;
-                case 2:
-                    //NEW EXAMINATION
-                    Menu.ReadNewExamination();
-                    break;
-                case 3:
-                    //GET INFORMATION ABPUT AN ECAMINATION
-                    break;
-                case 4:
-                    //TRIGGER EVENTHUB EVENT
-                    break;
-                case 5:
-                    //QUIT
-                    break;
+                switch (mainmenu.ReadMenu())
+                {
+                    case 1:
+                        //NEW PATIENT
+                        Menu.ReadNewPatient();
+                        break;
+                    case 2:
+                        //NEW EXAMINATION
+                        Menu.ReadNewExamination();
+                        break;
+                    case 3:
+                        //GET INFORMATION ABPUT AN ECAMINATION
+                        break;
+                    case 4:
+                        //TRIGGER EVENTHUB EVENT
+                        EventTrigger();
+                        break;
+                    case 5:
+                        //QUIT
+                        break;
+                }
             }
         }
 

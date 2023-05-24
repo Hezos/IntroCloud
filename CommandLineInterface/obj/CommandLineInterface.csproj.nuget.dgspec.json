@@ -1,23 +1,53 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FELHO\\IntroCloud\\CommandLineInterface\\CommandLineInterface.csproj": {}
+    "D:\\IntroToCloud\\ToBeAdministrated\\CommandLineInterface\\CommandLineInterface.csproj": {}
   },
   "projects": {
-    "D:\\FELHO\\IntroCloud\\CommandLineInterface\\CommandLineInterface.csproj": {
+    "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsReader\\AzureEventHubsReader.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsReader\\AzureEventHubsReader.csproj",
+        "projectName": "AzureEventHubsReader",
+        "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsReader\\AzureEventHubsReader.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsWriter\\AzureEventHubsWriter.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsWriter\\AzureEventHubsWriter.csproj",
+        "projectName": "AzureEventHubsWriter",
+        "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsWriter\\AzureEventHubsWriter.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "D:\\IntroToCloud\\ToBeAdministrated\\CommandLineInterface\\CommandLineInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FELHO\\IntroCloud\\CommandLineInterface\\CommandLineInterface.csproj",
+        "projectUniqueName": "D:\\IntroToCloud\\ToBeAdministrated\\CommandLineInterface\\CommandLineInterface.csproj",
         "projectName": "CommandLineInterface",
-        "projectPath": "D:\\FELHO\\IntroCloud\\CommandLineInterface\\CommandLineInterface.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "D:\\FELHO\\IntroCloud\\CommandLineInterface\\obj\\",
+        "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\CommandLineInterface\\CommandLineInterface.csproj",
+        "packagesPath": "C:\\Users\\Nbenc\\.nuget\\packages\\",
+        "outputPath": "D:\\IntroToCloud\\ToBeAdministrated\\CommandLineInterface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nbenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +63,23 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FELHO\\IntroCloud\\RESTcontrollers\\RESTcontrollers.csproj": {
-                "projectPath": "D:\\FELHO\\IntroCloud\\RESTcontrollers\\RESTcontrollers.csproj"
+              "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsReader\\AzureEventHubsReader.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsReader\\AzureEventHubsReader.csproj"
+              },
+              "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsWriter\\AzureEventHubsWriter.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsWriter\\AzureEventHubsWriter.csproj"
+              },
+              "D:\\IntroToCloud\\ToBeAdministrated\\EventHubTriggerApp\\EventHubTriggerApp.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\EventHubTriggerApp\\EventHubTriggerApp.csproj"
+              },
+              "D:\\IntroToCloud\\ToBeAdministrated\\HttpTableWriter\\HttpTableWriter.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\HttpTableWriter\\HttpTableWriter.csproj"
+              },
+              "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj"
+              },
+              "D:\\IntroToCloud\\ToBeAdministrated\\ToBeAdministrated\\ToBeAdministrated.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\ToBeAdministrated\\ToBeAdministrated.csproj"
               }
             }
           }
@@ -70,24 +115,176 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FELHO\\IntroCloud\\RESTcontrollers\\RESTcontrollers.csproj": {
+    "D:\\IntroToCloud\\ToBeAdministrated\\EventHubTriggerApp\\EventHubTriggerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FELHO\\IntroCloud\\RESTcontrollers\\RESTcontrollers.csproj",
-        "projectName": "RESTcontrollers",
-        "projectPath": "D:\\FELHO\\IntroCloud\\RESTcontrollers\\RESTcontrollers.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "D:\\FELHO\\IntroCloud\\RESTcontrollers\\obj\\",
+        "projectUniqueName": "D:\\IntroToCloud\\ToBeAdministrated\\EventHubTriggerApp\\EventHubTriggerApp.csproj",
+        "projectName": "EventHubTriggerApp",
+        "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\EventHubTriggerApp\\EventHubTriggerApp.csproj",
+        "packagesPath": "C:\\Users\\Nbenc\\.nuget\\packages\\",
+        "outputPath": "D:\\IntroToCloud\\ToBeAdministrated\\EventHubTriggerApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nbenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Azure.Data.Tables": {
+              "target": "Package",
+              "version": "[12.8.0, )"
+            },
+            "Microsoft.Azure.WebJobs.Extensions.EventHubs": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.NET.Sdk.Functions": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\IntroToCloud\\ToBeAdministrated\\HttpTableWriter\\HttpTableWriter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\IntroToCloud\\ToBeAdministrated\\HttpTableWriter\\HttpTableWriter.csproj",
+        "projectName": "HttpTableWriter",
+        "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\HttpTableWriter\\HttpTableWriter.csproj",
+        "packagesPath": "C:\\Users\\Nbenc\\.nuget\\packages\\",
+        "outputPath": "D:\\IntroToCloud\\ToBeAdministrated\\HttpTableWriter\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nbenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Azure.Data.Tables": {
+              "target": "Package",
+              "version": "[12.8.0, )"
+            },
+            "Microsoft.Azure.WebJobs.Extensions.EventHubs": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.NET.Sdk.Functions": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj",
+        "projectName": "RESTcontrollers",
+        "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj",
+        "packagesPath": "C:\\Users\\Nbenc\\.nuget\\packages\\",
+        "outputPath": "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nbenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -139,7 +336,81 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\IntroToCloud\\ToBeAdministrated\\ToBeAdministrated\\ToBeAdministrated.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\IntroToCloud\\ToBeAdministrated\\ToBeAdministrated\\ToBeAdministrated.csproj",
+        "projectName": "ToBeAdministrated",
+        "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\ToBeAdministrated\\ToBeAdministrated.csproj",
+        "packagesPath": "C:\\Users\\Nbenc\\.nuget\\packages\\",
+        "outputPath": "D:\\IntroToCloud\\ToBeAdministrated\\ToBeAdministrated\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nbenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Azure.Data.Tables": {
+              "target": "Package",
+              "version": "[12.7.1, )"
+            },
+            "Microsoft.Azure.WebJobs.Extensions.EventHubs": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.NET.Sdk.Functions": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

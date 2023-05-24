@@ -12,7 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AzureEventHubsReader\AzureEventHubsReader.csproj" />
+    <ProjectReference Include="..\AzureEventHubsWriter\AzureEventHubsWriter.csproj" />
+    <ProjectReference Include="..\EventHubTriggerApp\EventHubTriggerApp.csproj" />
+    <ProjectReference Include="..\HttpTableWriter\HttpTableWriter.csproj" />
     <ProjectReference Include="..\RESTcontrollers\RESTcontrollers.csproj" />
+    <ProjectReference Include="..\ToBeAdministrated\ToBeAdministrated.csproj" />
   </ItemGroup>
 
 </Project>

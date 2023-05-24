@@ -1,7 +1,8 @@
-﻿using RESTcontrollers.Models;
+﻿
 using System.Text.Json;
 using System.Text;
 using CommandLineInterface;
+using RESTcontrollers.Repositories;
 
 namespace RESTcontrollers.Services
 {
@@ -14,8 +15,8 @@ namespace RESTcontrollers.Services
         }
         public bool SendRequest(HttpMethod httpMethod, string url, Examination exam)
         {
-            HttpServiceClass serviceClass = new HttpServiceClass(new HttpClient());
-            return serviceClass.SendRequest(httpMethod, url, exam);
+            ExaminationRespository repository = new ExaminationRespository(new HttpClient());
+            return repository.SendRequest(httpMethod, url, exam);
         }
 
         public dynamic GetRequest(HttpMethod httpMethod, string url, string BodyContent)

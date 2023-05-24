@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandLineInterface
+namespace RESTcontrollers
 {
-    enum Eye
+    public enum Gender
     {
-        Left,
-        Right
+        Male,
+        Female,
+        Other
     }
 }

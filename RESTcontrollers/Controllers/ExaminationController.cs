@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RESTcontrollers.Models;
+﻿using CommandLineInterface;
+using Microsoft.AspNetCore.Mvc;
 using RESTcontrollers.Services;
 
 namespace RESTcontrollers.Controllers
@@ -16,7 +16,7 @@ namespace RESTcontrollers.Controllers
         {
             service = new ExaminationService();
         }
-
+        //https://localhost:7252/Add
         [HttpPost("/Add")]
         public IActionResult UploadExamination()
         {

@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
-using RESTcontrollers.Models;
+using RESTcontrollers;
 
 namespace CommandLineInterface
 {

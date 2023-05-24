@@ -9,7 +9,6 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using Microsoft.WindowsAzure.Storage.Table;
 using Newtonsoft.Json;
-using RESTcontrollers.Models;
 using Azure.Data.Tables.Models;
 using Azure.Data.Tables;
 using TableEntity = Azure.Data.Tables.TableEntity;
@@ -48,12 +47,12 @@ namespace Company.Function
                 throw exceptions.Single();
             log.LogInformation("It works");
 
-            Examination data;
+            //Examintion data;
             try
             {
                 string requestBody = "";
                 //Doesn't get exception, should make fields required.
-                data = JsonConvert.DeserializeObject<Examination>(requestBody);
+              //  data = JsonConvert.DeserializeObject<Examination>(requestBody);
             }
             catch (JsonSerializationException exception)
             {
@@ -90,16 +89,18 @@ namespace Company.Function
 
                 string partitionKey = "Examination";
                 //Check for rowkey correction!
-                data = new Examination();
-                string rowKey = data.Id.ToString();
-                rowKey = "1";
+                // data = new Examination();
+                string rowKey; 
+                   // = data.Id.ToString();
+                //Ask repository for Id
+                rowKey = "4";
                 TableEntity tableEntity = new TableEntity(partitionKey, rowKey){
 
-                    /*
+                    
                 { "Eye", "Left" }, { "Dioptry", 5.00 },{ "Cylinder", 21 }, {"Axis", 2 }
                      
-                     */
-                    {"Eye", data.Eye }, {"Dioptry", data.Dioptry}, {"Cylinder", data.Cylinder}, {"Axis", data.Axis}
+                     
+                   // {"Eye", data.Eye }, {"Dioptry", data.Dioptry}, {"Cylinder", data.Cylinder}, {"Axis", data.Axis}
                 };
 
                 Console.WriteLine($"{tableEntity.RowKey}: {tableEntity["Eye"]} ");

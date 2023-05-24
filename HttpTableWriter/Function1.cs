@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Azure.Data.Tables.Models;
 using Azure.Data.Tables;
-using RESTcontrollers.Models;
+using RESTcontrollers;
 
 namespace HttpTableWriter
 {
@@ -64,7 +64,7 @@ namespace HttpTableWriter
 
                 string partitionKey = "Examination";
                 //Check for rowkey correction!
-                string rowKey = data.Id.ToString();
+                string rowKey = data.patientId.ToString();
                 rowKey = "1";
                 TableEntity tableEntity = new TableEntity(partitionKey, rowKey){
 
@@ -72,7 +72,7 @@ namespace HttpTableWriter
                 { "Eye", "Left" }, { "Dioptry", 5.00 },{ "Cylinder", 21 }, {"Axis", 2 }
                      
                      */
-                    {"Eye", data.Eye }, {"Dioptry", data.Dioptry}, {"Cylinder", data.Cylinder}, {"Axis", data.Axis}
+                    {"Eye", data.eye }, {"Dioptry", data.sphereDiopter}, {"Cylinder", data.cylinderDiopter}, {"Axis", data.axis}
                 };
 
                 Console.WriteLine($"{tableEntity.RowKey}: {tableEntity["Eye"]} ");

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandLineInterface
+namespace RESTcontrollers
 {
-    internal class Patient
+    public class Patient
     {
         private int id;
         private string firstname;
