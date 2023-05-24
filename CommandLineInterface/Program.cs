@@ -125,6 +125,16 @@ namespace CommandLineInterface
                 }
             }
 
+            for (int i = 1; i <= numOfEvents; i++)
+            {
+                //Okay jsonstring maybe?????????????
+                if (!eventBatch.TryAdd(new EventData(Encoding.UTF8.GetBytes(JsonSerializer.Serialize(new Examination())))))
+                {
+                    // if it is too large for the batch
+                    Console.WriteLine("Examination added.");
+                }
+            }
+
             try
             {
                 // Use the producer client to send the batch of events to the event hub
