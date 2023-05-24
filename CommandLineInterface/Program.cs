@@ -106,6 +106,15 @@ namespace CommandLineInterface
             }
         }
         */
+
+
+        //Itt vannak a kommentek:
+        //Patient REST rész híányzik
+        //Controller, Service, Repository, nagyrészt másolás az Examination-ból
+        //ExaminationController kommentek
+
+
+        //Ez az egész, majd a Repository-ba kerül.
         public async static void EventTrigger()
         {
             int numOfEvents = 1;
