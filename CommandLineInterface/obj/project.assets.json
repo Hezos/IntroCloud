@@ -833,23 +833,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nbenc\\.nuget\\packages\\": {},
+    "C:\\Users\\chris\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IntroToCloud\\ToBeAdministrated\\CommandLineInterface\\CommandLineInterface.csproj",
+      "projectUniqueName": "D:\\FELHO\\IntroCloud\\CommandLineInterface\\CommandLineInterface.csproj",
       "projectName": "CommandLineInterface",
-      "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\CommandLineInterface\\CommandLineInterface.csproj",
-      "packagesPath": "C:\\Users\\Nbenc\\.nuget\\packages\\",
-      "outputPath": "D:\\IntroToCloud\\ToBeAdministrated\\CommandLineInterface\\obj\\",
+      "projectPath": "D:\\FELHO\\IntroCloud\\CommandLineInterface\\CommandLineInterface.csproj",
+      "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+      "outputPath": "D:\\FELHO\\IntroCloud\\CommandLineInterface\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nbenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -865,8 +865,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj": {
-              "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj"
+            "D:\\FELHO\\IntroCloud\\RESTcontrollers\\RESTcontrollers.csproj": {
+              "projectPath": "D:\\FELHO\\IntroCloud\\RESTcontrollers\\RESTcontrollers.csproj"
             }
           }
         }
@@ -902,7 +902,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

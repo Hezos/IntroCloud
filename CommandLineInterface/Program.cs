@@ -13,6 +13,7 @@ namespace CommandLineInterface
         static void Main(string[] args)
         {
             Console.WriteLine("Program started");
+            /*
             bool ShouldExit = false;
             while (!ShouldExit)
             {
@@ -36,8 +37,39 @@ namespace CommandLineInterface
                         throw new Exception("Wrong number was pressed.");
                 }
             }
+            */
+
+            Menu mainmenu = new Menu(new string[]{
+                "Add a new patient",
+                "Add a new examination",
+                "Get information about an examination",
+                "Trigger EventHub event",
+                "Quit"
+            });
+
+            switch (mainmenu.ReadMenu())
+            {
+                case 1:
+                    //NEW PATIENT
+                    Menu.ReadNewPatient();
+                    break;
+                case 2:
+                    //NEW EXAMINATION
+                    Menu.ReadNewExamination();
+                    break;
+                case 3:
+                    //GET INFORMATION ABPUT AN ECAMINATION
+                    break;
+                case 4:
+                    //TRIGGER EVENTHUB EVENT
+                    break;
+                case 5:
+                    //QUIT
+                    break;
+            }
         }
 
+        /*
         public static void WriteMenu()
         {
             Console.WriteLine("Please select an action!");
@@ -46,7 +78,9 @@ namespace CommandLineInterface
             Console.WriteLine("3-Trigger EventHub event.");
             Console.WriteLine("4-Quit");
         }
+        */
 
+        /*
         public static void AddExamination()
         {
             Examination examination = new Examination();
@@ -67,7 +101,7 @@ namespace CommandLineInterface
                 Console.WriteLine("Adding exam didn't happen.");
             }
         }
-
+        */
         public async static void EventTrigger()
         {
             int numOfEvents = 1;
