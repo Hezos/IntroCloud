@@ -9,6 +9,7 @@ namespace RESTcontrollers.Controllers
     [ApiController]
     public class ExaminationController : Controller
     {
+        //Handle other requests! Don't forget to Change the classes!
         private readonly ExaminationService service;
 
         public ExaminationController()

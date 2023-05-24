@@ -16,12 +16,13 @@ namespace Company.Function
         {
             var exceptions = new List<Exception>();
 
+            //Fix Json Serialization
             foreach (EventData eventData in events)
             {
                 try
                 {
                     // Replace these two lines with your processing logic.
-                    log.LogInformation($"C# Event Hub trigger function processed a message: {eventData.EventBody}");
+                    log.LogInformation($"Event Hub message: {eventData.EventBody}");
                     await Task.Yield();
                 }
                 catch (Exception e)
@@ -31,7 +32,6 @@ namespace Company.Function
                     exceptions.Add(e);
                 }
             }
-
             // Once processing of the batch is complete, if any messages in the batch failed processing throw an exception so that there is a record of the failure.
 
             if (exceptions.Count > 1)
@@ -39,7 +39,7 @@ namespace Company.Function
 
             if (exceptions.Count == 1)
                 throw exceptions.Single();
-            log.LogInformation("If works");
+            log.LogInformation("It works");
         }
     }
 }
