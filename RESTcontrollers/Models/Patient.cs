@@ -36,9 +36,9 @@ namespace RESTcontrollers
         public DateTime Birth { get => birth; set => birth = value; }
         internal Gender Gender { get => gender; set => gender = value; }
 
-        public Patient GetPatientFromString(string input)
+        static public Patient GetPatientFromString(string input)
         {
-            string[] array = input.Split(',');
+            string[] array = input.Split(';');
             return new Patient(int.Parse(array[0]), array[1], array[2], (Gender)Enum.Parse(typeof(Gender), array[3]), DateTime.Parse(array[4]));
         }
         public override string ToString()

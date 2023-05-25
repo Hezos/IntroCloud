@@ -38,9 +38,9 @@ namespace RESTcontrollers
         public int? Axis { get => axis; set => axis = value; }
         public Eye? Eye { get => eye; set => eye = value; }
 
-        public Examination GetExaminationFromString(string input)
+        static public Examination GetExaminationFromString(string input)
         {
-            string[] array = input.Split(',');
+            string[] array = input.Split(';');
             return new Examination(int.Parse(array[0]), (Eye)Enum.Parse(typeof(Eye), array[1]), double.Parse(array[2]), double.Parse(array[3]), int.Parse(array[4]));
         }
         public override string ToString()
