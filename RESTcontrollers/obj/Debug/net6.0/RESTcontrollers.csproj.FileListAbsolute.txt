@@ -63,3 +63,4 @@ D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\Azure.Messagi
 D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\Microsoft.Azure.Amqp.dll
 D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\System.Memory.Data.dll
+D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\Newtonsoft.Json.dll

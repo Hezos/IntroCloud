@@ -70,15 +70,10 @@ namespace CommandLineInterface
         {
             Examination examination = new Examination();
             HttpServiceClass httpService = new HttpServiceClass(new HttpClient());
-            //httpService.SendRequest(HttpMethod.Post, "http://localhost:7103/api/Function1", examination);
-            if( httpService.SendRequest(HttpMethod.Post, "https://localhost:7252/Add", examination))
-            {
-                Console.WriteLine("Getting exam is successfull.");
-            }
-            else
-            {
-                Console.WriteLine("Getting exam didn't happen.");
-            }
+            //;
+            dynamic result = httpService.GetRequest(HttpMethod.Get, "https://localhost:7252/GetExaminations", "");
+            
+            Console.WriteLine(result);
         }
         
 

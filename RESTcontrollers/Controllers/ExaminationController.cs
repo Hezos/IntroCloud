@@ -36,9 +36,14 @@ namespace RESTcontrollers.Controllers
         }
 
         //Olvasást itt majd meg kell oldani
+
+        [HttpGet("/GetExaminations")]
         public IActionResult GetExaminations()
         {
-            return Ok(service.GetRequest(HttpMethod.Get, "",""));
+            dynamic result = service.GetRequest(HttpMethod.Post, "http://localhost:7103/api/Function1", "");
+            Console.WriteLine(result);
+            
+            return Ok(result);
         }
     }
 }

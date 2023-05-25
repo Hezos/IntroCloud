@@ -22,7 +22,8 @@ namespace RESTcontrollers.Repositories
             //ServiceClass, ez oldja meg, hogy tudjunk küldeni hívásokat
             HttpServiceClass serviceClass = new HttpServiceClass(new HttpClient());
             //Meghívjuk a hívást, url-re vigyázni!
-            bool result = serviceClass.SendRequest(httpMethod, url, exam);
+           // bool result = serviceClass.SendRequest(httpMethod, url, exam);
+            bool result = true;
             EventTrigger();
             return result;
         }
@@ -36,7 +37,9 @@ namespace RESTcontrollers.Repositories
             HttpResponseMessage httpResponseMessage = _httpClient.Send(httpRequestMessage);
             if (httpResponseMessage.IsSuccessStatusCode)
             {
-                return JsonSerializer.Deserialize<Examination>(httpRequestMessage.Content.ReadAsStringAsync().Result);
+                // return JsonSerializer.Deserialize<List<Examination>>(httpRequestMessage.Content.ReadAsStringAsync().Result);
+                
+                return httpRequestMessage.Content.ReadAsStringAsync().Result;
             }
             return "Couldn't handle request";
         }

@@ -13,7 +13,7 @@ using Azure.Data.Tables.Models;
 using Azure.Data.Tables;
 using TableEntity = Azure.Data.Tables.TableEntity;
 using Azure;
-using System.Numerics;
+using RESTcontrollers;
 
 namespace Company.Function
 {
@@ -55,12 +55,12 @@ namespace Company.Function
             }
 
 
-            //Examintion data;
+            Examination data;
             try
             {
                 string requestBody = "";
                 //Doesn't get exception, should make fields required.
-              //  data = JsonConvert.DeserializeObject<Examination>(requestBody);
+                data = JsonConvert.DeserializeObject<Examination>(requestBody);
             }
             catch (JsonSerializationException exception)
             {
@@ -97,7 +97,7 @@ namespace Company.Function
 
                 string partitionKey = "Examination";
                 //Check for rowkey correction!
-                // data = new Examination();
+                data = new Examination();
                 string rowKey;
                 // = data.Id.ToString();
                 //Ask repository for Id
@@ -108,13 +108,24 @@ namespace Company.Function
                 Pageable<TableEntity> queryResultsFilter = tableClient.Query<TableEntity>(filter: $"PartitionKey eq '{partitionKey}'");
                 Console.WriteLine($"The query returned {queryResultsFilter.Count()} entities.");
 
-                rowKey = (queryResultsFilter.Count() +1).ToString();
+                data.patientId = (queryResultsFilter.Count() +1);
+                rowKey = data.patientId.ToString();
+                //Enum work with only custom clas
+                string EyeValue = "";
+                switch (data.Eye)
+                {
+                    case Eye.Right:
+                        EyeValue = "Right";
+                        break;
+                    case Eye.Left:
+                        EyeValue = "Left";
+                        break;
+                }
+                //Check if the Examination is valid
                 TableEntity tableEntity = new TableEntity(partitionKey, rowKey){
-                  
-                { "Eye", "Left" }, { "Dioptry", 5.00 },{ "Cylinder", 21 }, {"Axis", 2 }
-                     
-                     
-                   // {"Eye", data.Eye }, {"Dioptry", data.Dioptry}, {"Cylinder", data.Cylinder}, {"Axis", data.Axis}
+                    // Change to Tuple
+                { "Eye", "Left" }, { "Dioptry", 5.00 },{ "Cylinder", 21.00 }, {"Axis", 2 }
+               //     {"Eye",  EyeValue }, {"Dioptry", data.SphereDiopter}, {"Cylinder", data.CylinderDiopter}, {"Axis", data.Axis}
                 };
                 Response response;
                 Console.WriteLine($"{tableEntity.RowKey}: {tableEntity["Eye"]} ");

@@ -2715,7 +2715,8 @@
         "dependencies": {
           "Azure.Data.Tables": "12.8.0",
           "Microsoft.Azure.WebJobs.Extensions.EventHubs": "5.0.0",
-          "Microsoft.NET.Sdk.Functions": "4.1.1"
+          "Microsoft.NET.Sdk.Functions": "4.1.1",
+          "RESTcontrollers": "1.0.0"
         },
         "compile": {
           "bin/placeholder/EventHubTriggerApp.dll": {}
@@ -2748,6 +2749,7 @@
           "Azure.Core.Amqp": "1.3.0",
           "Azure.Messaging.EventHubs": "5.9.1",
           "Microsoft.Azure.Amqp": "2.6.2",
+          "Newtonsoft.Json": "11.0.2",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "compile": {
@@ -2764,9 +2766,14 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Azure.Data.Tables": "12.7.1",
+          "Azure.Data.Tables": "12.8.0",
+          "AzureEventHubsReader": "1.0.0",
+          "AzureEventHubsWriter": "1.0.0",
+          "EventHubTriggerApp": "1.0.0",
+          "HttpTableWriter": "1.0.0",
           "Microsoft.Azure.WebJobs.Extensions.EventHubs": "5.0.0",
-          "Microsoft.NET.Sdk.Functions": "4.1.1"
+          "Microsoft.NET.Sdk.Functions": "4.1.1",
+          "RESTcontrollers": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ToBeAdministrated.dll": {}

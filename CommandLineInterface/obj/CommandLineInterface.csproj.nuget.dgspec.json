@@ -147,7 +147,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -328,6 +332,10 @@
               "target": "Package",
               "version": "[2.6.2, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -384,7 +392,23 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsReader\\AzureEventHubsReader.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsReader\\AzureEventHubsReader.csproj"
+              },
+              "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsWriter\\AzureEventHubsWriter.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\AzureEventHubsWriter\\AzureEventHubsWriter.csproj"
+              },
+              "D:\\IntroToCloud\\ToBeAdministrated\\EventHubTriggerApp\\EventHubTriggerApp.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\EventHubTriggerApp\\EventHubTriggerApp.csproj"
+              },
+              "D:\\IntroToCloud\\ToBeAdministrated\\HttpTableWriter\\HttpTableWriter.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\HttpTableWriter\\HttpTableWriter.csproj"
+              },
+              "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj": {
+                "projectPath": "D:\\IntroToCloud\\ToBeAdministrated\\RESTcontrollers\\RESTcontrollers.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -399,7 +423,7 @@
           "dependencies": {
             "Azure.Data.Tables": {
               "target": "Package",
-              "version": "[12.7.1, )"
+              "version": "[12.8.0, )"
             },
             "Microsoft.Azure.WebJobs.Extensions.EventHubs": {
               "target": "Package",

@@ -40,7 +40,7 @@ namespace CommandLineInterface
             HttpResponseMessage httpResponseMessage = _httpClient.Send(httpRequestMessage);
             if (httpResponseMessage.IsSuccessStatusCode)
             {
-                return JsonSerializer.Deserialize<Examination>(httpRequestMessage.Content.ReadAsStringAsync().Result);
+                return JsonSerializer.Deserialize<List<Examination>>(httpRequestMessage.Content.ReadAsStringAsync().Result);
             }
             return "Couldn't handle request";
         }
