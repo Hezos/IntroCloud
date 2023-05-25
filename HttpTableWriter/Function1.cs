@@ -57,13 +57,10 @@ namespace HttpTableWriter
             }
 
             // Construct a new <see cref="TableClient" /> using a <see cref="TableSharedKeyCredential" />.
-            var tableClient = new TableClient(
-                new Uri(storageUri),
-                tableName,
-                new TableSharedKeyCredential(accountName, storageAccountKey));
+            var tableClient = new TableClient( new Uri(storageUri), tableName, new TableSharedKeyCredential(accountName,
+                storageAccountKey));
             string partitionKey = "Examination";
             // "1" rowid doesn't seem to change anything.
-
             tableClient.GetEntity<TableEntity>(partitionKey,"1");
             Pageable<TableEntity> queryResultsFilter = tableClient.Query<TableEntity>(filter: $"PartitionKey eq '{partitionKey}'");
 
@@ -76,9 +73,7 @@ namespace HttpTableWriter
 
             Console.WriteLine($"The query returned {queryResultsFilter.Count()} entities.");
 
-
-
-            return new OkObjectResult(responseMessage);
+            return new OkObjectResult(queryResultsFilter);
         }
     }
 }

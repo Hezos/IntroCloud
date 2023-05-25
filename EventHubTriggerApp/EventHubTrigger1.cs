@@ -13,6 +13,7 @@ using Azure.Data.Tables.Models;
 using Azure.Data.Tables;
 using TableEntity = Azure.Data.Tables.TableEntity;
 using Azure;
+using System.Numerics;
 
 namespace Company.Function
 {
@@ -97,14 +98,19 @@ namespace Company.Function
                 string partitionKey = "Examination";
                 //Check for rowkey correction!
                 // data = new Examination();
-                string rowKey; 
-                   // = data.Id.ToString();
+                string rowKey;
+                // = data.Id.ToString();
                 //Ask repository for Id
                 //If it wouldn't work that's because of async
-                rowKey = "8";
-                TableEntity tableEntity = new TableEntity(partitionKey, rowKey){
 
-                    
+                // "1" rowid doesn't seem to change anything.
+                tableClient.GetEntity<TableEntity>(partitionKey, "1");
+                Pageable<TableEntity> queryResultsFilter = tableClient.Query<TableEntity>(filter: $"PartitionKey eq '{partitionKey}'");
+                Console.WriteLine($"The query returned {queryResultsFilter.Count()} entities.");
+
+                rowKey = (queryResultsFilter.Count() +1).ToString();
+                TableEntity tableEntity = new TableEntity(partitionKey, rowKey){
+                  
                 { "Eye", "Left" }, { "Dioptry", 5.00 },{ "Cylinder", 21 }, {"Axis", 2 }
                      
                      
@@ -119,7 +125,7 @@ namespace Company.Function
                 }
                 catch (RequestFailedException reqException)
                 {
-                    log.LogError($" TableEntity id is not valid {reqException.Message}");
+                    log.LogWarning(reqException.Message);
                 }
             }
 
