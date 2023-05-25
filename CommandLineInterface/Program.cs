@@ -40,8 +40,7 @@ namespace CommandLineInterface
                         break;
                     case 4:
                         //TRIGGER EVENTHUB EVENT
-                        HttpServiceClass serviceClass = new HttpServiceClass(new HttpClient());
-                        serviceClass.SendRequest(HttpMethod.Post, "https://localhost:7252/Add", new Examination());
+                        AddExamination();
                         break;
                     case 5:
                         ShouldExit = true;
@@ -61,8 +60,12 @@ namespace CommandLineInterface
             Console.WriteLine("4-Quit");
         }
         */
+        public static void AddExamination()
+        {
+            HttpServiceClass serviceClass = new HttpServiceClass(new HttpClient());
+            serviceClass.SendRequest(HttpMethod.Post, "https://localhost:7252/Add", new Examination());
+        }
 
-        
         public static void ReadData()
         {
             Examination examination = new Examination();
@@ -84,53 +87,5 @@ namespace CommandLineInterface
         //Patient REST rész híányzik
         //Controller, Service, Repository, nagyrészt másolás az Examination-ból
         //ExaminationController kommentek
-
-
-        //Ez az egész, majd a Repository-ba kerül.
-        public async static void EventTrigger()
-        {
-            int numOfEvents = 1;
-
-            // The Event Hubs client types are safe to cache and use as a singleton for the lifetime
-            // of the application, which is best practice when events are being published or read regularly.
-            // TODO: Replace the <CONNECTION_STRING> and <HUB_NAME> placeholder values
-            string ConnectionString = "Endpoint=sb://testforeventhub.servicebus.windows.net/;SharedAccessKeyName=EventHubPolicy;SharedAccessKey=F9ALB5M1I/GvFbjObW7n0kGfNU20JpsGw+AEhKdKPLI=;EntityPath=myeventhubtest";
-            string HubName = "myeventhubtest";
-            EventHubProducerClient producerClient = new EventHubProducerClient( ConnectionString, HubName);
-
-            // Create a batch of events 
-            using EventDataBatch eventBatch = await producerClient.CreateBatchAsync();
-
-            for (int i = 1; i <= numOfEvents; i++)
-            {
-                if (!eventBatch.TryAdd(new EventData(Encoding.UTF8.GetBytes($"Event {i}"))))
-                {
-                    // if it is too large for the batch
-                    throw new Exception($"Event {i} is too large for the batch and cannot be sent.");
-                }
-            }
-
-            for (int i = 1; i <= numOfEvents; i++)
-            {
-                //Okay jsonstring maybe?????????????
-                if (!eventBatch.TryAdd(new EventData(Encoding.UTF8.GetBytes(JsonSerializer.Serialize(new Examination())))))
-                {
-                    // if it is too large for the batch
-                    Console.WriteLine("Examination added.");
-                }
-            }
-
-            try
-            {
-                // Use the producer client to send the batch of events to the event hub
-                await producerClient.SendAsync(eventBatch);
-                Console.WriteLine($"A batch of {numOfEvents} events has been published.");
-                //AddExamination();
-            }
-            finally
-            {
-                await producerClient.DisposeAsync();
-            }
-        }
     }
 }

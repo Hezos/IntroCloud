@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 using Azure.Data.Tables.Models;
 using Azure.Data.Tables;
 using TableEntity = Azure.Data.Tables.TableEntity;
+using Azure;
 
 namespace Company.Function
 {
@@ -29,7 +30,7 @@ namespace Company.Function
                 {
                     // Replace these two lines with your processing logic.
                     log.LogInformation($"Event Hub message: {eventData.EventBody}");
-                    await Task.Yield();
+                    //await Task.Yield();
                 }
                 catch (Exception e)
                 {
@@ -41,11 +42,17 @@ namespace Company.Function
             // Once processing of the batch is complete, if any messages in the batch failed processing throw an exception so that there is a record of the failure.
 
             if (exceptions.Count > 1)
+            {
+                log.LogInformation("More than 1 exceptions acquired.");
                 throw new AggregateException(exceptions);
+            }
 
             if (exceptions.Count == 1)
+            {
+                log.LogInformation("Has 1 exception");
                 throw exceptions.Single();
-            log.LogInformation("It works");
+            }
+
 
             //Examintion data;
             try
@@ -93,7 +100,8 @@ namespace Company.Function
                 string rowKey; 
                    // = data.Id.ToString();
                 //Ask repository for Id
-                rowKey = "5";
+                //If it wouldn't work that's because of async
+                rowKey = "8";
                 TableEntity tableEntity = new TableEntity(partitionKey, rowKey){
 
                     
@@ -102,9 +110,17 @@ namespace Company.Function
                      
                    // {"Eye", data.Eye }, {"Dioptry", data.Dioptry}, {"Cylinder", data.Cylinder}, {"Axis", data.Axis}
                 };
-
+                Response response;
                 Console.WriteLine($"{tableEntity.RowKey}: {tableEntity["Eye"]} ");
-                tableClient.AddEntity(tableEntity);
+                try {
+                    response = await tableClient.AddEntityAsync(tableEntity);
+                    log.LogInformation(response.ToString());
+
+                }
+                catch (RequestFailedException reqException)
+                {
+                    log.LogError($" TableEntity id is not valid {reqException.Message}");
+                }
             }
 
         }

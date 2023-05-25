@@ -22,8 +22,9 @@ namespace RESTcontrollers.Repositories
             //ServiceClass, ez oldja meg, hogy tudjunk küldeni hívásokat
             HttpServiceClass serviceClass = new HttpServiceClass(new HttpClient());
             //Meghívjuk a hívást, url-re vigyázni!
+            bool result = serviceClass.SendRequest(httpMethod, url, exam);
             EventTrigger();
-            return serviceClass.SendRequest(httpMethod, url, exam);
+            return result;
         }
 
         //Itt majd az olvasásnak kell lennie: valamelyik dokumentációs link
@@ -40,7 +41,7 @@ namespace RESTcontrollers.Repositories
             return "Couldn't handle request";
         }
 
-        public async static void EventTrigger()
+        public async void EventTrigger()
         {
             int numOfEvents = 1;
 
