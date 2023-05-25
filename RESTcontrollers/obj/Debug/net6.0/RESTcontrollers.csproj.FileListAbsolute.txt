@@ -57,3 +57,9 @@ D:\FELHO\IntroCloud\RESTcontrollers\obj\Debug\net6.0\refint\RESTcontrollers.dll
 D:\FELHO\IntroCloud\RESTcontrollers\obj\Debug\net6.0\RESTcontrollers.pdb
 D:\FELHO\IntroCloud\RESTcontrollers\obj\Debug\net6.0\RESTcontrollers.genruntimeconfig.cache
 D:\FELHO\IntroCloud\RESTcontrollers\obj\Debug\net6.0\ref\RESTcontrollers.dll
+D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\Azure.Core.dll
+D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\Azure.Core.Amqp.dll
+D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\Azure.Messaging.EventHubs.dll
+D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\Microsoft.Azure.Amqp.dll
+D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\IntroToCloud\ToBeAdministrated\RESTcontrollers\bin\Debug\net6.0\System.Memory.Data.dll

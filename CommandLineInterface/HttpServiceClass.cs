@@ -18,7 +18,7 @@ namespace CommandLineInterface
         {
             _httpClient = httpClient;
         }
-        /*
+        
         public bool SendRequest(HttpMethod httpMethod, string url, Examination exam)
         {
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage(httpMethod, url);
@@ -31,7 +31,7 @@ namespace CommandLineInterface
             }
             return false;
         }
-        */
+        
         public dynamic GetRequest(HttpMethod httpMethod, string url, string BodyContent)
         {
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage(httpMethod, url);

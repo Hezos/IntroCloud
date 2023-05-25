@@ -13,31 +13,6 @@ namespace CommandLineInterface
         static void Main(string[] args)
         {
             Console.WriteLine("Program started");
-            /*
-            bool ShouldExit = false;
-            while (!ShouldExit)
-            {
-                WriteMenu();
-                switch (Convert.ToInt32(Console.ReadLine()))
-                {
-                    case 1:
-                        //Add logic goes here
-                      //  AddExamination();
-                        break;
-                    case 2:
-                        //View logic goes here
-                        break;
-                    case 3:
-                        EventTrigger();
-                        break;
-                    case 4:
-                        ShouldExit = true;
-                        break;
-                    default:
-                        throw new Exception("Wrong number was pressed.");
-                }
-            }
-            */
 
             Menu mainmenu = new Menu(new string[]{
                 "Add a new patient",
@@ -60,13 +35,16 @@ namespace CommandLineInterface
                         Menu.ReadNewExamination();
                         break;
                     case 3:
-                        //GET INFORMATION ABPUT AN ECAMINATION
+                        //GET INFORMATION ABPUT AN EXAMINATION
+                        ReadData();
                         break;
                     case 4:
                         //TRIGGER EVENTHUB EVENT
-                        EventTrigger();
+                        HttpServiceClass serviceClass = new HttpServiceClass(new HttpClient());
+                        serviceClass.SendRequest(HttpMethod.Post, "https://localhost:7252/Add", new Examination());
                         break;
                     case 5:
+                        ShouldExit = true;
                         //QUIT
                         break;
                 }
@@ -84,28 +62,22 @@ namespace CommandLineInterface
         }
         */
 
-        /*
-        public static void AddExamination()
+        
+        public static void ReadData()
         {
             Examination examination = new Examination();
-            examination.Id = 3;
-            examination.Eye = "Left";
-            examination.Dioptry = 5.00;
-            examination.Cylinder = 21;
-            examination.Axis = 2;
-
             HttpServiceClass httpService = new HttpServiceClass(new HttpClient());
             //httpService.SendRequest(HttpMethod.Post, "http://localhost:7103/api/Function1", examination);
             if( httpService.SendRequest(HttpMethod.Post, "https://localhost:7252/Add", examination))
             {
-                Console.WriteLine("Adding exam is successfull.");
+                Console.WriteLine("Getting exam is successfull.");
             }
             else
             {
-                Console.WriteLine("Adding exam didn't happen.");
+                Console.WriteLine("Getting exam didn't happen.");
             }
         }
-        */
+        
 
 
         //Itt vannak a kommentek:

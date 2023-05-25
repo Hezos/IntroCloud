@@ -20,7 +20,7 @@
           "CommandLineInterface.dll": {}
         }
       },
-      "Azure.Core/1.31.0": {
+      "Azure.Core/1.32.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
           "System.Diagnostics.DiagnosticSource": "4.6.0",
@@ -32,14 +32,14 @@
         },
         "runtime": {
           "lib/net6.0/Azure.Core.dll": {
-            "assemblyVersion": "1.31.0.0",
-            "fileVersion": "1.3100.23.21004"
+            "assemblyVersion": "1.32.0.0",
+            "fileVersion": "1.3200.23.26002"
           }
         }
       },
       "Azure.Core.Amqp/1.3.0": {
         "dependencies": {
-          "Microsoft.Azure.Amqp": "2.6.1",
+          "Microsoft.Azure.Amqp": "2.6.2",
           "System.Memory": "4.5.4",
           "System.Memory.Data": "1.0.2"
         },
@@ -52,7 +52,7 @@
       },
       "Azure.Data.Tables/12.8.0": {
         "dependencies": {
-          "Azure.Core": "1.31.0",
+          "Azure.Core": "1.32.0",
           "System.Text.Json": "4.7.2"
         },
         "runtime": {
@@ -64,7 +64,7 @@
       },
       "Azure.Identity/1.4.0": {
         "dependencies": {
-          "Azure.Core": "1.31.0",
+          "Azure.Core": "1.32.0",
           "Microsoft.Identity.Client": "4.30.1",
           "Microsoft.Identity.Client.Extensions.Msal": "2.18.4",
           "System.Memory": "4.5.4",
@@ -81,9 +81,9 @@
       },
       "Azure.Messaging.EventHubs/5.9.1": {
         "dependencies": {
-          "Azure.Core": "1.31.0",
+          "Azure.Core": "1.32.0",
           "Azure.Core.Amqp": "1.3.0",
-          "Microsoft.Azure.Amqp": "2.6.1",
+          "Microsoft.Azure.Amqp": "2.6.2",
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
           "System.Diagnostics.DiagnosticSource": "4.6.0",
           "System.Memory.Data": "1.0.2",
@@ -112,7 +112,7 @@
       },
       "Azure.Storage.Common/12.9.0": {
         "dependencies": {
-          "Azure.Core": "1.31.0"
+          "Azure.Core": "1.32.0"
         },
         "runtime": {
           "lib/netstandard2.0/Azure.Storage.Common.dll": {
@@ -281,11 +281,11 @@
           "System.Text.Encodings.Web": "4.7.2"
         }
       },
-      "Microsoft.Azure.Amqp/2.6.1": {
+      "Microsoft.Azure.Amqp/2.6.2": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.Azure.Amqp.dll": {
             "assemblyVersion": "2.4.0.0",
-            "fileVersion": "2.2.0.0"
+            "fileVersion": "2.6.2.0"
           }
         }
       },
@@ -414,7 +414,7 @@
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
       "Microsoft.Extensions.Azure/1.1.1": {
         "dependencies": {
-          "Azure.Core": "1.31.0",
+          "Azure.Core": "1.32.0",
           "Azure.Identity": "1.4.0",
           "Microsoft.Extensions.Configuration.Abstractions": "2.1.1",
           "Microsoft.Extensions.Configuration.Binder": "2.1.1",
@@ -1425,6 +1425,10 @@
       },
       "RESTcontrollers/1.0.0": {
         "dependencies": {
+          "Azure.Core": "1.32.0",
+          "Azure.Core.Amqp": "1.3.0",
+          "Azure.Messaging.EventHubs": "5.9.1",
+          "Microsoft.Azure.Amqp": "2.6.2",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -1505,12 +1509,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Azure.Core/1.31.0": {
+    "Azure.Core/1.32.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YZlzaVS4XpPPIob934+UFfxvxMWe05PG3FDfwAXZz+MY+ShDJCjMokfrfh18F7VDW5tG0iMbPVjigeL6crGCiQ==",
-      "path": "azure.core/1.31.0",
-      "hashPath": "azure.core.1.31.0.nupkg.sha512"
+      "sha512": "sha512-NmnJxaNqKjPwnHXngVg63SrkwbJXrkT0mcK8uCx9rSq0nK6Q3Q+/GZRCaTWcdcECoRP5XK0lr3Ce8PZkHkuHNg==",
+      "path": "azure.core/1.32.0",
+      "hashPath": "azure.core.1.32.0.nupkg.sha512"
     },
     "Azure.Core.Amqp/1.3.0": {
       "type": "package",
@@ -1694,12 +1698,12 @@
       "path": "microsoft.aspnetcore.webutilities/2.1.0",
       "hashPath": "microsoft.aspnetcore.webutilities.2.1.0.nupkg.sha512"
     },
-    "Microsoft.Azure.Amqp/2.6.1": {
+    "Microsoft.Azure.Amqp/2.6.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-yWnawf7MD/PUNzvLcVkWN0s4kQT3+CUy4sP19CmBnyFX5Uy/CCRC0M6Amkl1p8bn9yht1oSLu+m8d6nc9DLJoA==",
-      "path": "microsoft.azure.amqp/2.6.1",
-      "hashPath": "microsoft.azure.amqp.2.6.1.nupkg.sha512"
+      "sha512": "sha512-6hQqWRiHRd9J6pGBlzQM9LBOWaO8xIsRVYs3olrDGqOkK7v9mgwz9rmrv+49FIbLEOGgkP9IKLnXdsA4Y8IIYw==",
+      "path": "microsoft.azure.amqp/2.6.2",
+      "hashPath": "microsoft.azure.amqp.2.6.2.nupkg.sha512"
     },
     "Microsoft.Azure.Functions.Analyzers/1.0.0": {
       "type": "package",

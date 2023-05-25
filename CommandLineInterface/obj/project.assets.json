@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Azure.Core/1.31.0": {
+      "Azure.Core/1.32.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
@@ -500,7 +500,7 @@
           }
         }
       },
-      "Microsoft.Azure.Amqp/2.6.1": {
+      "Microsoft.Azure.Amqp/2.6.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Azure.Amqp.dll": {
@@ -2744,6 +2744,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Azure.Core": "1.32.0",
+          "Azure.Core.Amqp": "1.3.0",
+          "Azure.Messaging.EventHubs": "5.9.1",
+          "Microsoft.Azure.Amqp": "2.6.2",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "compile": {
@@ -2774,16 +2778,16 @@
     }
   },
   "libraries": {
-    "Azure.Core/1.31.0": {
-      "sha512": "YZlzaVS4XpPPIob934+UFfxvxMWe05PG3FDfwAXZz+MY+ShDJCjMokfrfh18F7VDW5tG0iMbPVjigeL6crGCiQ==",
+    "Azure.Core/1.32.0": {
+      "sha512": "NmnJxaNqKjPwnHXngVg63SrkwbJXrkT0mcK8uCx9rSq0nK6Q3Q+/GZRCaTWcdcECoRP5XK0lr3Ce8PZkHkuHNg==",
       "type": "package",
-      "path": "azure.core/1.31.0",
+      "path": "azure.core/1.32.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.core.1.31.0.nupkg.sha512",
+        "azure.core.1.32.0.nupkg.sha512",
         "azure.core.nuspec",
         "azureicon.png",
         "lib/net461/Azure.Core.dll",
@@ -3158,10 +3162,10 @@
         "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
-    "Microsoft.Azure.Amqp/2.6.1": {
-      "sha512": "yWnawf7MD/PUNzvLcVkWN0s4kQT3+CUy4sP19CmBnyFX5Uy/CCRC0M6Amkl1p8bn9yht1oSLu+m8d6nc9DLJoA==",
+    "Microsoft.Azure.Amqp/2.6.2": {
+      "sha512": "6hQqWRiHRd9J6pGBlzQM9LBOWaO8xIsRVYs3olrDGqOkK7v9mgwz9rmrv+49FIbLEOGgkP9IKLnXdsA4Y8IIYw==",
       "type": "package",
-      "path": "microsoft.azure.amqp/2.6.1",
+      "path": "microsoft.azure.amqp/2.6.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3176,7 +3180,7 @@
         "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Microsoft.Azure.Amqp.dll",
         "lib/uap10.0/Microsoft.Azure.Amqp.dll",
         "lib/uap10.0/Microsoft.Azure.Amqp.pri",
-        "microsoft.azure.amqp.2.6.1.nupkg.sha512",
+        "microsoft.azure.amqp.2.6.2.nupkg.sha512",
         "microsoft.azure.amqp.nuspec"
       ]
     },
