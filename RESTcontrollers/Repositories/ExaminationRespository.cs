@@ -24,35 +24,33 @@ namespace RESTcontrollers.Repositories
             //Meghívjuk a hívást, url-re vigyázni!
            // bool result = serviceClass.SendRequest(httpMethod, url, exam);
             bool result = true;
-            EventTrigger();
+            EventTrigger(exam);
             return result;
         }
 
         //Itt majd az olvasásnak kell lennie: valamelyik dokumentációs link
-        public dynamic GetRequest(HttpMethod httpMethod, string url, string BodyContent)
+        public List<Examination> GetRequest(HttpMethod httpMethod, string url)
         {
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage(httpMethod, url);
-            string content = JsonSerializer.Serialize(BodyContent);
-            httpRequestMessage.Content = new StringContent(content, Encoding.UTF8, "application/json");
             HttpResponseMessage httpResponseMessage = _httpClient.Send(httpRequestMessage);
             if (httpResponseMessage.IsSuccessStatusCode)
             {
                 // return JsonSerializer.Deserialize<List<Examination>>(httpRequestMessage.Content.ReadAsStringAsync().Result);
                 
-                return httpRequestMessage.Content.ReadAsStringAsync().Result;
+                return JsonSerializer.Deserialize<List<Examination>>(httpResponseMessage.Content.ReadAsStringAsync().Result);
             }
-            return "Couldn't handle request";
+            return null;
         }
 
-        public async void EventTrigger()
+        public async void EventTrigger(Examination examination)
         {
             int numOfEvents = 1;
 
             // The Event Hubs client types are safe to cache and use as a singleton for the lifetime
             // of the application, which is best practice when events are being published or read regularly.
             // TODO: Replace the <CONNECTION_STRING> and <HUB_NAME> placeholder values
-            string ConnectionString = "Endpoint=sb://testforeventhub.servicebus.windows.net/;SharedAccessKeyName=EventHubPolicy;SharedAccessKey=F9ALB5M1I/GvFbjObW7n0kGfNU20JpsGw+AEhKdKPLI=;EntityPath=myeventhubtest";
-            string HubName = "myeventhubtest";
+            string ConnectionString = "Endpoint=sb://eventhubadministrated.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ZT/AxbwAPELJeMGkB761S6k4E3l1AdQw9+AEhDlC6AI=";
+            string HubName = "eventhubadministrated";
             EventHubProducerClient producerClient = new EventHubProducerClient(ConnectionString, HubName);
 
             // Create a batch of events 
@@ -71,7 +69,7 @@ namespace RESTcontrollers.Repositories
             {
                 //Okay jsonstring maybe?????????????
                 if (!eventBatch.TryAdd(new Azure.Messaging.EventHubs.EventData(Encoding.UTF8.GetBytes(JsonSerializer.Serialize(
-                    new Examination())))))
+                    examination)))))
                 {
                     // if it is too large for the batch
                     Console.WriteLine("Examination added.");

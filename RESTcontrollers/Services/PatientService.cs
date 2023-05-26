@@ -1,15 +1,18 @@
-﻿
+﻿using RESTcontrollers.Repositories;
 using System.Text.Json;
 using System.Text;
-
-using RESTcontrollers.Repositories;
+using CommandLineInterface;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
+using Azure.Messaging.EventHubs;
+using Azure.Messaging.EventHubs.Producer;
+using EventData = Azure.Messaging.EventHubs.EventData;
 
 namespace RESTcontrollers.Services
 {
-    public class ExaminationService
+    public class PatientService
     {
         private HttpClient _httpClient;
-        public ExaminationService()
+        public PatientService()
         {
             // Patient RST rész: Majdnem az egész csak másolás, de a Controller attributumokat, majd le kell cserélni a megfelelőre,
             // http hívás rész, az másolás, de az url-re majd vigyázni kell, mivel nincs a patient-nek eventhub-ja, ezért a link
@@ -18,12 +21,13 @@ namespace RESTcontrollers.Services
 
         //Itt szeretnénk http hívást küldeni
         //Mi kell hozzá: Methodús: Get, Post például, url: string amit meghívunk, vizsgálat itt az üzenet tartalma miatt kell
-        public bool SendRequest(HttpMethod httpMethod, string url, Examination exam)
+        public bool SendRequest(HttpMethod httpMethod, string url, Patient patient)
         {
-            //Repository, hogy meghívjuk a metódusait
-            ExaminationRespository repository = new ExaminationRespository(new HttpClient());
-            //Továbbhívunk a repository-ra
-            return repository.SendRequest(httpMethod, url, exam);
+            
+            //PatientRepository repository = new PatientRepository(new HttpClient());
+            
+            //return repository.SendRequest(httpMethod, url, patient);
+            return true;
         }
 
 

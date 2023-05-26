@@ -2,7 +2,7 @@
     "IsEncrypted": false,
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-    "ConnectionString": "Endpoint=sb://testforeventhub.servicebus.windows.net/;SharedAccessKeyName=EventHubPolicy;SharedAccessKey=F9ALB5M1I/GvFbjObW7n0kGfNU20JpsGw+AEhKdKPLI=;EntityPath=myeventhubtest",
+    "ConnectionString": "Endpoint=sb://eventhubadministrated.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ZT/AxbwAPELJeMGkB761S6k4E3l1AdQw9+AEhDlC6AI=;",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet"
   }
 }

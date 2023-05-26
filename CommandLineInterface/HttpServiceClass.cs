@@ -32,17 +32,15 @@ namespace CommandLineInterface
             return false;
         }
         
-        public dynamic GetRequest(HttpMethod httpMethod, string url, string BodyContent)
+
+        public dynamic GetRequest(HttpMethod httpMethod, string url)
         {
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage(httpMethod, url);
-            string content = JsonSerializer.Serialize(BodyContent);
-            httpRequestMessage.Content = new StringContent(content, Encoding.UTF8, "application/json");
             HttpResponseMessage httpResponseMessage = _httpClient.Send(httpRequestMessage);
             if (httpResponseMessage.IsSuccessStatusCode)
             {
                 //JsonSerializer.Deserialize<Examination>()
-                Console.WriteLine(httpRequestMessage.Content.ReadAsStringAsync().Result);
-                return httpRequestMessage.Content.ReadAsStringAsync().Result;
+                return httpResponseMessage.Content.ReadAsStringAsync().Result;
             }
             return "Couldn't handle request";
         }

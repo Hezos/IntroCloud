@@ -18,6 +18,7 @@ namespace CommandLineInterface
                 "Add a new patient",
                 "Add a new examination",
                 "Get information about an examination",
+                "Get examinations by Axis",
                 "Trigger EventHub event",
                 "Quit"
             });
@@ -32,17 +33,24 @@ namespace CommandLineInterface
                         break;
                     case 2:
                         //NEW EXAMINATION
-                        Menu.ReadNewExamination();
+                        Examination examination = Menu.ReadNewExamination();
+                        AddExamination(examination);
                         break;
                     case 3:
                         //GET INFORMATION ABPUT AN EXAMINATION
                         ReadData();
                         break;
                     case 4:
-                        //TRIGGER EVENTHUB EVENT
-                        AddExamination();
+                        int axis = Convert.ToInt32(Console.ReadLine());
+                        foreach (var item in GetExaminationsByAxis(axis))
+                        {
+                            Console.WriteLine(item);
+                        }
                         break;
                     case 5:
+                        //TRIGGER EVENTHUB EVENT
+                        break;
+                    case 6:
                         ShouldExit = true;
                         //QUIT
                         break;
@@ -60,20 +68,30 @@ namespace CommandLineInterface
             Console.WriteLine("4-Quit");
         }
         */
-        public static void AddExamination()
+        public static void AddExamination(Examination examination)
         {
             HttpServiceClass serviceClass = new HttpServiceClass(new HttpClient());
-            serviceClass.SendRequest(HttpMethod.Post, "https://localhost:7252/Add", new Examination());
+            serviceClass.SendRequest(HttpMethod.Post, "https://localhost:7252/Add", examination);
         }
 
-        public static void ReadData()
+        public static List<Examination> GetExaminationsByAxis(int Axis)
+        {
+            return ReadData().Where(x => x.Axis == Axis).ToList();
+        }
+
+        public static IEnumerable<Examination> ReadData()
         {
             Examination examination = new Examination();
             HttpServiceClass httpService = new HttpServiceClass(new HttpClient());
             //;
-            dynamic result = httpService.GetRequest(HttpMethod.Get, "https://localhost:7252/GetExaminations", "");
-            
+
+            IEnumerable<Examination> result = JsonSerializer.Deserialize<IEnumerable<Examination>>(httpService.GetRequest(HttpMethod.Get, "https://localhost:7252/GetExaminations"));
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
             Console.WriteLine(result);
+            return result;
         }
         
 

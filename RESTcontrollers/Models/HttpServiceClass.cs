@@ -32,6 +32,19 @@ namespace CommandLineInterface
             return false;
         }
 
+        public bool SendRequest(HttpMethod httpMethod, string url, Patient patient)
+        {
+            HttpRequestMessage httpRequestMessage = new HttpRequestMessage(httpMethod, url);
+            string content = JsonSerializer.Serialize(patient);
+            httpRequestMessage.Content = new StringContent(content, Encoding.UTF8, "application/json");
+            HttpResponseMessage httpResponseMessage = _httpClient.Send(httpRequestMessage);
+            if (httpResponseMessage.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public dynamic GetRequest(HttpMethod httpMethod, string url, string BodyContent)
         {
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage(httpMethod, url);

@@ -20,7 +20,7 @@ namespace Company.Function
     public static class EventHubTrigger1
     {
         [FunctionName("EventHubTrigger1")]
-        public static async Task Run([EventHubTrigger("myeventhubtest", Connection = "ConnectionString")] EventData[] events, ILogger log)
+        public static async Task Run([EventHubTrigger("eventhubadministrated", Connection = "ConnectionString")] EventData[] events, ILogger log)
         {
             var exceptions = new List<Exception>();
 
@@ -125,7 +125,7 @@ namespace Company.Function
                 TableEntity tableEntity = new TableEntity(partitionKey, rowKey){
                     // Change to Tuple
                 { "Eye", "Left" }, { "Dioptry", 5.00 },{ "Cylinder", 21.00 }, {"Axis", 2 }
-               //     {"Eye",  EyeValue }, {"Dioptry", data.SphereDiopter}, {"Cylinder", data.CylinderDiopter}, {"Axis", data.Axis}
+                //   {"Eye",  EyeValue }, {"Dioptry", data.SphereDiopter}, {"Cylinder", data.CylinderDiopter}, {"Axis", data.Axis}
                 };
                 Response response;
                 Console.WriteLine($"{tableEntity.RowKey}: {tableEntity["Eye"]} ");
